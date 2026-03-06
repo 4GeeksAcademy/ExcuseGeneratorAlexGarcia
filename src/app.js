@@ -6,6 +6,30 @@ import "./assets/img/rigo-baby.jpg";
 import "./assets/img/4geeks.ico";
 
 window.onload = function() {
-  //write your code here
-  console.log("Hello Rigo from the console!");
+
+  let who = ['The dog', 'My grandma', 'The mailman', 'My bird'];
+  let action = ['ate', 'peed', 'crushed', 'broke'];
+  let what = ['my homework', 'my phone', 'the car'];
+  let when = ['before the class', 'when I was sleeping', 'while I was exercising', 'during my lunch', 'while I was praying'];
+
+  let rdmWho = Math.floor(Math.random() * who.length);
+  let rdmAction = Math.floor(Math.random() * action.length);
+  let rdmWhat = Math.floor(Math.random() * what.length);
+  let rdmWhen = Math.floor(Math.random() * when.length);
+
+  document.getElementById("excuse").innerHTML = (who[rdmWho] + " " + action[rdmAction] + " " + what[rdmWhat] + " " + when[rdmWhen]);
+
+  document.getElementById("btn").addEventListener("click", () => {
+    location.reload();
+  })
+
+
+
+
+
+
+
+
+  
+  
 };
